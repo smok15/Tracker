@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9584223-ea9a-4a4d-a344-ed5c1e8cf55a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tracker/templates/addacar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/ database.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/form.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/form.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/routes.py" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/routes.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tracker/templates/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/templates/account.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/templates/layout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/templates/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/templates/map.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tracker/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/templates/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
