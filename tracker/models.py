@@ -1,4 +1,4 @@
-from tracker import db,login_manager
+from tracker import db, login_manager
 from flask_login import UserMixin
 
 
@@ -7,22 +7,22 @@ def load_user(user_id):
     return User.query.get(int(user_id))
 
 
-
-class User(db.Model,UserMixin):
+class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(20), unique=True, nullable=False)
     email = db.Column(db.String(50), unique=True, nullable=False)
     password = db.Column(db.String(60), nullable=False)
-    #cars = db.relationship('Cars', backref='właściciele', lazy=True)
 
     def __repr__(self):
         return f"User('{self.username}','{self.email}','{self.id}','{self.password}')"
 
 
 class Car(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    map = db.Column(db.String(20), unique=True)
-    #user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
+    __bind_key__ = 'cars'
+    number = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer, unique=True, nullable=False)
+    plate = db.Column(db.String(10), unique=True, nullable=False)
+    brand = db.Column(db.String(20))
 
     def __repr__(self):
-        return f"Car(''{self.id}','{self.map}')"
+        return f"Car('{self.number}','{self.plate}','{self.id}','{self.brand}')"

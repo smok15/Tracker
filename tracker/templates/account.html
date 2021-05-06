@@ -1,4 +1,18 @@
 {% extends "layout.html" %}
 {% block content %}
-    <h1>{{ current_user.username }}</h1>
+        <h1>Pojazdy użytkownika {{ current_user.username }}</h1>
+<table border="1" bgcolor="lightgrey" width="500">
+        <tr>
+            <th>Id Pojazdu</th>
+            <th>Numer Rejestracyjny</th>
+            <th>Marka</th>
+        </tr>
+        {% for Car in query %}
+            <tr>
+                <td>{{Car.id}}</td>
+                <td>{{Car.plate}}</td>
+                <td>{{Car.brand}}</td>
+            </tr>
+        {% endfor %}
+</table>
 {% endblock content %}

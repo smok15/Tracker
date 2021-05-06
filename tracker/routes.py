@@ -1,6 +1,6 @@
 from flask import render_template, url_for, flash, redirect, request
 from tracker import app, db, bcrypt
-from tracker.form import RegistrationForm, LoginForm
+from tracker.form import RegistrationForm, LoginForm, AddACarForm
 from flask_login import login_user, current_user, logout_user, login_required
 from tracker.models import User, Car
 import folium, os
@@ -51,6 +51,18 @@ def login():
     return render_template('login.html', title='Login', form=form)
 
 
+@app.route("/addacar", methods=['GET', 'POST'])
+def addacar():
+    form = AddACarForm()
+    if form.validate_on_submit():
+        car = Car(id=form.id.data, plate=form.plate.data, brand=form.brand.data)
+        db.session.add(car)
+        db.session.commit()
+        flash(f'Pojazd został dodany!', 'success')
+        return redirect(url_for('account'))
+    return render_template('addacar.html', form=form)
+
+
 @app.route("/logout")
 def logout():
     logout_user()
@@ -60,4 +72,5 @@ def logout():
 @app.route("/account")
 @login_required
 def account():
-    return render_template('account.html')
+    return render_template('account.html',query=Car.query.all())
+
