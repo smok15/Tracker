@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9584223-ea9a-4a4d-a344-ed5c1e8cf55a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/tracker/templates/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/tracker/templates/account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
